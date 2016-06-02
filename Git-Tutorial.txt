@@ -1,0 +1,77 @@
+We should collect here some of the git commands all of us are going to use at some point.
+
+First of all think of git as a system to manage your personal AND our common data.
+
+******************************************************************************
+
+1. "Getting the common data to your pc"
+
+******************************************************************************
+
+The most crucial command will be:
+
+"git pull"
+
+which will kind of download/update from our common database on github to your personal computer. This will be important whenever updates are available from someone from our group or the professors team.
+Note that this command has to be done in the terminal (in Windows it was something like "git bash" as far as I remember) AND you need to navigate to your project folder (probably .../mmcm-project) first.
+
+
+
+******************************************************************************
+
+2. "Contributing to the common data"
+
+******************************************************************************
+
+If you created some stuff that is somehow valuable for our project and want to add it to our common database, so that also the other members can use this, you need to upload this data in two steps:
+
+******************************************************************************
+2.1 Making a git versionlog on your pc
+******************************************************************************
+
+This step itself consists of some substeps that might make sense now to you but definately will later. Think of it like preparing a postpaket you want to send to somebody:
+
+2.1.0 Getting an overview
+Type:
+
+"git status"
+
+This will give you an overview over what files are new or changed (red) and files that you chose in the next step to be in the versionpaket.
+
+2.1.1 Adding content
+Whatever files you created you can add to the versionpaket via:
+
+"git add FILENAME"
+
+Hint1: Use the TAB to autocomplete FILENAMES.
+Hint2: Use the previous step to decide what files to add.
+
+2.1.2 Sending the version paket
+After you finished adding all the content you wanted, you will want to send/save the paket. For this you use
+
+"git commit"
+
+After you typed this the terminal will open a file that is describing your versionpaket. It would be best if you add your personal description of what you added/changed.
+Best practice is to make a 80letter title and than if you like a more detailed description.
+
+On Pablo and my Computer git chooses the editor VIM for editing the file. It is a bit special in the following way:
+A) You have to first press "i" to actually write/"i"nclude something.
+B) After finished writing you press "ESC".
+C) To save your description AND quit the editor you than press ":wq" (Like "w"rite and "q"uit and yes: don't forget the colon ":")
+
+Now you made a versionlog on your pc. You can check it via "git status". It should look more clean now.
+
+******************************************************************************
+2.2 Uploading the versionlog
+******************************************************************************
+
+After you already made a "git commit" paket you can now easily upload it. 
+You first simply update changes from the internet:
+
+"git pull"
+
+And than send your paket to the common github data via:
+
+"git push".
+
+Now your data is available for everyone in the group and everyone can get it via "git pull".
